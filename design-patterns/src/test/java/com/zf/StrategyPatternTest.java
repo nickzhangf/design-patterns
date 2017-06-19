@@ -30,4 +30,14 @@ public class StrategyPatternTest
         Context context1 = new Context(new SubAlgorithm());
         context1.handle();
     }
+
+    /**
+     * lambda表达式写法
+     */
+    @Test
+    public void TestByLambda()
+    {
+        Context addContext = new Context(() -> System.out.println("This is add algorithm"));
+        addContext.handle();
+    }
 }
